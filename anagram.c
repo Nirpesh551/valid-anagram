@@ -3,13 +3,7 @@
 #include <stdbool.h>
 #include <ctype.h>
 
-/**
- * Function to check if two strings are anagrams
- * 
- * @param s - First string
- * @param t - Second string
- * @return true if anagrams, false otherwise
- */
+// Check if two strings are anagrams
 bool isAnagram(char *s, char *t) {
     // Get lengths of both strings
     int len_s = strlen(s);
@@ -20,7 +14,7 @@ bool isAnagram(char *s, char *t) {
         return false;
     }
     
-    // Array to count frequency of each letter (a-z)
+    // Count frequency of each character (a-z)
     int count[26] = {0};
     
     // Count characters: increment for s, decrement for t
@@ -29,7 +23,7 @@ bool isAnagram(char *s, char *t) {
         count[tolower(t[i]) - 'a']--;
     }
     
-    // Check if all counts are zero (balanced)
+    // // If all counts are zero, strings are anagrams
     for (int i = 0; i < 26; i++) {
         if (count[i] != 0) {
             return false;
