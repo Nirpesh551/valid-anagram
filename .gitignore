@@ -1,0 +1,14 @@
+# Compiled files
+*.o
+*.out
+anagram
+a.out
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
